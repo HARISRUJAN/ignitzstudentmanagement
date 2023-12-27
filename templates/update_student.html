@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Update Student</h1>
+    <form action="{{ url_for('update_student', id=student.id) }}" method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" name="full_name" value="{{ student.full_name }}" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="{{ student.email }}" required>
+        <label for="education_level">Education Level:</label>
+        <input type="text" name="education_level" value="{{ student.education_level }}" required>
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" name="phone_number" value="{{ student.phone_number }}" required>
+        <button type="submit">Update Student</button>
+    </form>
+</body>
+</html>
